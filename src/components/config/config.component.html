@@ -1,0 +1,29 @@
+<od-widget widget-title="Wetter Einstellungen" template="tpl-big-header">
+    <od-widget-header nospacing>
+        <div style="background:#FFFFFF; height: 392px; padding: 15px;">
+            <form ng-submit="configController.submitWeatherLocation(configController.selectedLocation)" class="configForm">
+                <div class="form-group">
+                    <div ng-if="configController.showNotingSelectedError" class="alert alert-danger">
+                        <span class="icon icon-exclamation-triangle"></span> Sie haben noch keinen Ort ausgewählt.
+                    </div>
+                    <div ng-if="configController.saveLocationError" class="alert alert-danger">
+                        <span class="icon icon-exclamation-triangle"></span> Der gewählte Ort konnte nicht gespeichert werden.
+                    </div>
+                    <label for="locations">Bitte suchen Sie hier Ihren gewünschten Ort:</label>
+                    <angucomplete-alt
+                            id="locations"
+                            placeholder="z.B. Berlin"
+                            selected-object="configController.selectedLocation"
+                            local-data="configController.locations"
+                            search-fields="label"
+                            title-field="label"
+                            input-class="form-control"
+                            input-changed="configController.onInputChanged"
+                            text-searching="Suche nach Orten"
+                            text-no-results="Keine Ergebnisse" />
+                </div>
+                <button type="submit" class="btn btn-success">Speichern</button>
+            </form>
+        </div>
+    </od-widget-header>
+</od-widget>

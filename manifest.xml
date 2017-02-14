@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="oddc.widget.weather" builder="2.3.1">
+    <information>
+        <name lang="de-DE">Wetter</name>
+        <version>1.1.1</version>
+        <author>
+            <company>opta data Gruppe</company>
+            <telephone>0201 / 3 19 60</telephone>
+            <fax>0201 / 3 19 62 22</fax>
+            <email>service@optadata-gruppe.de</email>
+            <web>http://www.optadata-gruppe.de</web>
+        </author>
+        <developer>
+            <name>Dennis Lehmann</name>
+            <email>d.lehmann@optadata-gruppe.de</email>
+        </developer>
+        <summary lang="de-DE">
+            <image>/ressources/images/small.jpg</image>
+            <text type="textile">
+                Das Wetter-Widget zeigt Ihnen die aktuelle Wettervorhersage für jeden beliebigen Ort an.
+            </text>
+        </summary>
+        <description lang="de-DE">
+            <image>/ressources/images/big.jpg</image>
+            <text type="textile">
+                Die Wettervorhersage für den aktuellen und die folgenden Tage am von Ihnen ausgewählten Ort haben Sie mit diesem Widget immer im Blick.
+            </text>
+        </description>
+        <tags>kostenlos,opta data,wettervorhersage</tags>
+        <appearance>
+            <text-appearance>light</text-appearance>
+            <main-color>#006b97</main-color>
+            <text-color>#FFFFFF</text-color>
+        </appearance>
+    </information>
+    <ressources>
+        <templates lang="de-DE">
+            <template cols="1" rows="1" markup="/src/app.html">
+                <styles>
+                    <style>/src/plugins/angucomplete-alt/angucomplete-alt.css</style>
+                    <style>/src/components/weather/weather.component.css</style>
+                    <style>/src/components/config/config.component.css</style>
+                    <style>/src/app.css</style>
+                </styles>
+                <scripts>
+                    <script>/src/plugins/angucomplete-alt/angucomplete-alt.js</script>
+                    <script>/src/app.js</script>
+                    <script>/src/services/weather.service/weather.service.js</script>
+                    <script>/src/components/weather/weather.component.js</script>
+                    <script>/src/components/config/config.component.js</script>
+                </scripts>
+            </template>
+        </templates>
+        <services>
+            <service environment="DEV" type="restful" name="loadWeather" url="http://odcweb1.optadata.com/services/services/weather/get/{location}" method="GET"></service>
+            <service environment="DEV" type="restful" name="loadLocations" url="http://odcweb1.optadata.com/services/services/weather/locations/{search}" method="GET"></service>
+            <service environment="DEV" type="restful" name="saveWeatherLocation" url="http://crm-test.optadata.com:8080/odone.business/propertys" method="PUT"></service>
+            <service environment="DEV" type="restful" name="loadCustomLocation" url="http://crm-test.optadata.com:8080/odone.business/propertys/oddc.widget.weather/location" method="GET"></service>
+            <service environment="DEV" type="restful" name="getCurrentUser" url="http://crm-test.optadata.com:8080/odone.business/users/current" method="GET"></service>
+
+            <service environment="PROD" type="restful" name="loadWeather" url="https://oddcserv.optadata-one.de/services/weather/get/{location}" method="GET"></service>
+            <service environment="PROD" type="restful" name="loadLocations" url="https://oddcserv.optadata-one.de/services/weather/locations/{search}" method="GET"></service>
+            <service environment="PROD" type="restful" name="saveWeatherLocation" url="https://biz.optadata-one.de/propertys" method="PUT"></service>
+            <service environment="PROD" type="restful" name="loadCustomLocation" url="https://biz.optadata-one.de/propertys/oddc.widget.weather/location" method="GET"></service>
+            <service environment="PROD" type="restful" name="getCurrentUser" url="https://biz.optadata-one.de/users/current" method="GET"></service>
+        </services>
+    </ressources>
+</widget>
+

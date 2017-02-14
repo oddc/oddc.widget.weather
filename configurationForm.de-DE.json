@@ -1,0 +1,20 @@
+{
+    "scheme": {
+        "type": "object",
+        "properties": {
+            "location": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "location"
+        ]
+    },
+    "form": [
+        {
+            "key": "location",
+            "placeholder": "z.B. Berlin",
+            "validationMessage": "Bitte geben Sie eine Stadt ihrer Wahl ein."
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+/index.html
+/1col.html
+/2col.html
+*.owf
+server.js
+.idea
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+node_modules

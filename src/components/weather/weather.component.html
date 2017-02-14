@@ -1,0 +1,52 @@
+<od-widget widget-title="Wetter" icon="ressources/images/icon.svg" template="tpl-big-header-ignore-titlebar" actions="weatherController.actions">
+    <od-widget-header nospacing>
+        <div class="{{weatherController.weatherService.getData().class}}">
+            <div class="topCol">
+                <div class="titlebar-background"></div>
+                <div class="location">{{ weatherController.weatherService.getData().location }}</div>
+                <div class="poweredby">Powered by Forecast</div>
+                <div class="data">
+                    <div class="icon">
+                        {{ weatherController.weatherService.getData().currently.icon }}
+                    </div>
+                    <div class="day">Aktuell</div>
+                    <div class="temp">{{ weatherController.weatherService.getData().currently.temp }}</div>
+                </div>
+            </div>
+
+            <div class="col-xs-4 day01">
+                <div class="data">
+                    <div class="icon">
+                        {{ weatherController.weatherService.getData().d1.icon }}
+                    </div>
+                    <div class="day">Morgen</div>
+                    <div class="temp">{{ weatherController.weatherService.getData().d1.temp.low }} - {{ weatherController.weatherService.getData().d1.temp.high }}</div>
+                </div>
+
+            </div>
+
+            <div class="col-xs-4 day02">
+                <div class="data">
+                    <div class="icon">
+                        {{ weatherController.weatherService.getData().d2.icon }}
+                    </div>
+                    <div class="day">{{ weatherController.weatherService.getData().d2.day }}</div>
+                    <div class="temp">{{ weatherController.weatherService.getData().d2.temp.low }} - {{ weatherController.weatherService.getData().d2.temp.high }}</div>
+                </div>
+            </div>
+
+            <div class="col-xs-4 day03">
+                <div class="data">
+                    <div class="icon">
+                        {{ weatherController.weatherService.getData().d3.icon }}
+                    </div>
+                    <div class="day">{{ weatherController.weatherService.getData().d3.day }}</div>
+                    <div class="temp">{{ weatherController.weatherService.getData().d3.temp.low }} - {{ weatherController.weatherService.getData().d3.temp.high }}</div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+    </od-widget-header>
+</od-widget>
