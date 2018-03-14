@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget id="oddc.widget.weather" builder="3.0.0">
+<widget id="oddc.widget.weather" builder="3.0.0" icon="/ressources/images/icon.png">
     <information>
         <name lang="de-DE">Wetter</name>
-        <version>1.1.6</version>
+        <version>1.1.8</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 / 3 19 60</telephone>
@@ -21,7 +21,10 @@
             </text>
         </summary>
         <description lang="de-DE">
-            <image>/ressources/images/big.jpg</image>
+            <media>
+                <image>/ressources/images/small.jpg</image>
+                <image>/ressources/images/big.jpg</image>
+            </media>
             <text type="textile">
                 Die Wettervorhersage für den aktuellen und die folgenden Tage am von Ihnen ausgewählten Ort haben Sie mit diesem Widget immer im Blick.
             </text>
@@ -31,6 +34,7 @@
             <text-appearance>light</text-appearance>
             <main-color>#006b97</main-color>
         </appearance>
+        <productgroup>odone.interne.widgets</productgroup>
     </information>
     <ressources>
         <templates lang="de-DE">
