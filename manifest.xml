@@ -2,7 +2,8 @@
 <widget id="oddc.widget.weather" builder="3.0.0" icon="/ressources/images/icon.png">
     <information>
         <name lang="de-DE">Wetter</name>
-        <version>1.1.8</version>
+		<shortname lang="de-DE">Wetter</shortname>
+        <version>1.1.9</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 / 3 19 60</telephone>
