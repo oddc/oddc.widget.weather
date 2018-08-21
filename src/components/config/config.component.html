@@ -12,6 +12,7 @@
                     <label for="locations">Bitte suchen Sie hier Ihren gewünschten Ort:</label>
                     <angucomplete-alt
                             id="locations"
+                            pause="600"
                             placeholder="z.B. Berlin"
                             selected-object="configController.selectedLocation"
                             local-data="configController.locations"
@@ -20,7 +21,7 @@
                             input-class="form-control"
                             input-changed="configController.onInputChanged"
                             text-searching="Suche nach Orten"
-                            text-no-results="Keine Ergebnisse" />
+                            text-no-results="Keine Ergebnisse"></angucomplete-alt>
                 </div>
                 <button type="submit" class="btn btn-success">Speichern</button>
             </form>
