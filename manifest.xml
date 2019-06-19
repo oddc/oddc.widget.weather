@@ -3,7 +3,7 @@
     <information>
         <name lang="de-DE">Wetter</name>
 		<shortname lang="de-DE">Wetter</shortname>
-        <version>1.2.1</version>
+        <version>1.2.2</version>
         <author>
             <company>opta data Gruppe</company>
             <telephone>0201 / 3 19 60</telephone>
@@ -58,9 +58,9 @@
         <services>
             <service environment="DEV" type="restful" name="loadWeather" url="http://odcweb1.optadata.com/services/services/weather/get/{location}" method="GET"></service>
             <service environment="DEV" type="restful" name="loadLocations" url="http://odcweb1.optadata.com/services/services/weather/locations/{search}" method="GET"></service>
-            <service environment="DEV" type="restful" name="saveWeatherLocation" url="http://crm-test.optadata.com:8080/odone.business/propertys" method="PUT"></service>
-            <service environment="DEV" type="restful" name="loadCustomLocation" url="http://crm-test.optadata.com:8080/odone.business/propertys/oddc.widget.weather/location" method="GET"></service>
-            <service environment="DEV" type="restful" name="getCurrentUser" url="http://crm-test.optadata.com:8080/odone.business/users/current" method="GET"></service>
+            <service environment="DEV" type="restful" name="saveWeatherLocation" url="http://wildfly.optadata.com:8080/odone.business/propertys" method="PUT"></service>
+            <service environment="DEV" type="restful" name="loadCustomLocation" url="http://wildfly.optadata.com:8080/odone.business/propertys/oddc.widget.weather/location" method="GET"></service>
+            <service environment="DEV" type="restful" name="getCurrentUser" url="http://wildfly.optadata.com:8080/odone.business/users/current" method="GET"></service>
 
             <service environment="PROD" type="restful" name="loadWeather" url="https://oddcserv.optadata-one.de/services/weather/get/{location}" method="GET"></service>
             <service environment="PROD" type="restful" name="loadLocations" url="https://oddcserv.optadata-one.de/services/weather/locations/{search}" method="GET"></service>
