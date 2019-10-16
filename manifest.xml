@@ -48,13 +48,13 @@
         <templates lang="de-DE">
             <template cols="1" rows="1" markup="/src/app.html">
                 <styles>
-                    <style>/src/plugins/angucomplete-alt/angucomplete-alt.css</style>
+                    <style>/src/plugins/autocomplete/autocomplete.component.css</style>
                     <style>/src/components/weather/weather.component.css</style>
                     <style>/src/components/config/config.component.css</style>
                     <style>/src/app.css</style>
                 </styles>
                 <scripts>
-                    <script>/src/plugins/angucomplete-alt/angucomplete-alt.js</script>
+                    <script>/src/plugins/autocomplete/autocomplete.component.js</script>
                     <script>/src/app.js</script>
                     <script>/src/services/weather.service/weather.service.js</script>
                     <script>/src/components/weather/weather.component.js</script>
