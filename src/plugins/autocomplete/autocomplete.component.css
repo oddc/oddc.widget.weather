@@ -1,0 +1,47 @@
+
+
+#autocomplete .search-btn {
+    width: 45px;
+}
+
+
+#autocomplete .matchList {
+    display: block;
+    min-width: 200px;
+    min-height: 35px;
+    border: 1px solid #d6d6d6;
+    position: absolute;
+    left: 60px;
+    background-color: #fbfbfb;
+}
+
+
+#autocomplete .match-not-found,
+#autocomplete .searching {
+    line-height: 35px;
+    color: #acacac;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+
+#autocomplete .match-list-items {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+
+#autocomplete .match-list-items li {
+    color: #acacac;
+    line-height: 20px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+#autocomplete .match-list-items li:hover {
+    background-color: #c0c0c0;
+    color: #ffffff;
+    padding: 5px;
+}

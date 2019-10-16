@@ -8,9 +8,9 @@
             'controllerAs': 'configController'
         });
 
-    configController.$inject = ['widgetState', 'weatherService', 'widgetServices', '$state', '$timeout', '$log'];
+    configController.$inject = ['widgetState', 'weatherService', 'widgetServices', '$scope', '$state', '$timeout', '$log'];
 
-    function configController(widgetState, weatherService, widgetServices, $state, $timeout, $log) {
+    function configController(widgetState, weatherService, widgetServices, $scope, $state, $timeout, $log) {
         var self = this;
 
         self.$onInit = function() {
@@ -20,6 +20,7 @@
         self.locations = [];
         self.showNotingSelectedError = false;
         self.saveLocationError = false;
+        self.selectedLocation = null;
 
 
         self.onInputChanged = function(value) {
@@ -50,9 +51,14 @@
         };
 
         self.submitWeatherLocation = function(location) {
-            if (typeof self.selectedLocation == 'undefined' || typeof self.selectedLocation.title == 'undefined') {
+            console.log(location, self.selectedLocation);
+            if (self.selectedLocation === null) {
                 self.showNotingSelectedError = true;
             } else {
+                if (typeof location.title === 'undefined') {
+                    location['title'] = location.label;
+                }
+
                 weatherService.saveWeatherLocation(location)
                     .then(function(){
                         $state.go('index');

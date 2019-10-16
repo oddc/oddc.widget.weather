@@ -9,19 +9,19 @@
                     <div ng-if="configController.saveLocationError" class="alert alert-danger">
                         <span class="icon icon-exclamation-triangle"></span> Der gewählte Ort konnte nicht gespeichert werden.
                     </div>
-                    <label for="locations">Bitte suchen Sie hier Ihren gewünschten Ort:</label>
-                    <angucomplete-alt
-                            id="locations"
-                            pause="600"
-                            placeholder="z.B. Berlin"
-                            selected-object="configController.selectedLocation"
-                            local-data="configController.locations"
-                            search-fields="label"
-                            title-field="label"
-                            input-class="form-control"
-                            input-changed="configController.onInputChanged"
-                            text-searching="Suche nach Orten"
-                            text-no-results="Keine Ergebnisse"></angucomplete-alt>
+                    <label>Bitte suchen Sie hier Ihren gewünschten Ort:</label>
+                    <autocomplete
+                        local-data="configController.locations",
+                        selected-item="configController.selectedLocation",
+                        search-field="label",
+                        title-field="label",
+                        input-changed="configController.onInputChanged",
+                        text-searching="Suche nach Orten",
+                        text-no-results="Keine Ergebnisse",
+                        placeholder="z.B. Berlin",
+                        pause="600">
+                    </autocomplete>
+
                 </div>
                 <button type="submit" class="btn btn-success">Speichern</button>
             </form>

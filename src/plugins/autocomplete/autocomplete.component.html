@@ -1,0 +1,29 @@
+
+<div id="autocomplete">
+
+    <div class="input-group">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default search-btn" ng-click="ctrl.onChange(null)"><span class="glyphicon glyphicon-search"></span></button>
+        </span>
+        <input type="text" class="form-control search-input" placeholder="{{ctrl.placeholder}}" ng-model="ctrl.search" ng-keyup="ctrl.onChange($event)">
+    </div>
+
+    <div class="matchList" ng-if="ctrl.search.trim() !== '' && ctrl.selectedItem === null">
+
+        <div class="match-not-found" ng-if="ctrl.localData.length === 0 && !ctrl.isSearching">
+            {{ctrl.textNoResults}}
+        </div>
+
+        <div class="searching" ng-if="ctrl.isSearching">
+            {{ctrl.textSearching}}
+        </div>
+
+        <ul class="match-list-items" ng-if="ctrl.localData.length > 0">
+            <li ng-repeat="item in ctrl.localData" ng-click="ctrl.onSelectItem(item)">
+                {{ctrl.getItemValue(item, ctrl.titleField)}}
+            </li>
+        </ul>
+
+    </div>
+
+</div>

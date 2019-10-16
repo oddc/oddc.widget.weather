@@ -6,3 +6,7 @@
 .configForm label {
     color: #888;
 }
+
+#locations_dropdown {
+    margin-top: 33px;
+}
