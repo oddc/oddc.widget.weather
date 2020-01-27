@@ -3,12 +3,13 @@
     <information>
         <name lang="de-DE">Wetter</name>
 		<shortname lang="de-DE">Wetter</shortname>
-        <version>1.3.1</version>
+        <version>1.3.2</version>
         <author>
+            <name>opta data digital communication GmbH</name>
             <company>opta data Gruppe</company>
             <telephone>0201 / 3 19 60</telephone>
             <fax>0201 / 3 19 62 22</fax>
-            <email>service@optadata-gruppe.de</email>
+            <email>od1-support@optadata.de</email>
             <web>http://www.optadata-gruppe.de</web>
         </author>
         <developer>
